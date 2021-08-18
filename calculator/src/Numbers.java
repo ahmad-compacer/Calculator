@@ -155,7 +155,7 @@ public class Numbers {
 			public void actionPerformed(ActionEvent e) {
 				String EnterNumber = Calculator.textField.getText() + btnPoint.getText();
 				Calculator.textField.setText(EnterNumber);
-			}
+			 }
 		});
 		btnPoint.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnPoint.setBounds(83, 317, 63, 52);
