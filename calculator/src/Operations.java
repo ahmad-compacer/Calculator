@@ -160,6 +160,7 @@ public class Operations {
 		btnEquals.setBounds(10, 379, 282, 52);
 		Calculator.frame.getContentPane().add(btnEquals);
 		return btnEquals;
+		
 	}
 
 }
