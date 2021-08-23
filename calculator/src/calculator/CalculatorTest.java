@@ -2,33 +2,36 @@ package calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-class CalculatorTest {
+public class CalculatorTest {
+	public Calculator calculator;
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
+	@Before
+	public void setUp() {
+		// Arrange
+		calculator = new Calculator();
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testAdd() {
+		double firstnum = Operations.firstnum;
+		double secondnum = Operations.secondnum;
+		String operation = Operations.operations;
+	    if (firstnum == 0  && operation == "*" ) {
+	    	assertEquals(0, Operations.getBtnEquals(), "Multiple with zero should be zero");
+	    } else if (secondnum == 0  && operation == "*" ) {
+	    	assertEquals(0, Operations.getBtnEquals(), "Multiple with zero should be zero");
+	    }else if (secondnum > 0 && firstnum > 0 && operation == "*" ) {
+	    	assertEquals( 1, Operations.getBtnEquals(), "Regular multiplication should work");
+	    }else if (secondnum < 0 && firstnum < 0 && operation == "*" ) {
+	    	assertEquals( 1, Operations.getBtnEquals(), "Regular multiplication should work");
+	    }else if (secondnum < 0 && firstnum > 0 && operation == "*" ) {
+	    	assertEquals( 1, Operations.getBtnEquals(), "Regular multiplication should work");
+	    }else if (secondnum > 0 && firstnum < 0 && operation == "*" ) {
+	    	assertEquals( 1, Operations.getBtnEquals(), "Regular multiplication should work");
+	    }
 	}
-
 }
