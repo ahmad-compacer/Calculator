@@ -51,18 +51,22 @@ public class Calculator {
 		Operations.getBtnEquals();
 		Operations.getBtnDelete();
 		Operations.getBtnClear();
-		Operations.getBtnPoint_1();
+		Operations.getBtnPlusMin();
 	}
-
+	/*
+	 * Fram design and title
+	 */
 	public JFrame getFrame() {
 		frame = new JFrame();
-		frame.setTitle("Calculator");
+		frame.setTitle("Ahmad Calculator");
 		frame.setBounds(100, 100, 321, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		return frame;
 	}
-
+	/*
+	 * Text Field design
+	 */
 	public JTextField getTextField() {
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -72,4 +76,5 @@ public class Calculator {
 		textField.setColumns(10);
 		return textField;
 	}
+	
 }
